@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #081321;
+  color: white;
+}
+
+header {
+  background: #101f33;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+header h2 span {
+  color: #50d7e8;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #50d7e8;
+}
+
+.hero {
+  padding: 90px 8%;
+  background: linear-gradient(120deg, #102c49, #081321);
+  min-height: 380px;
+}
+
+.hero p {
+  color: #9db4ca;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #50d7e8;
+}
+
+.btn {
+  display: inline-block;
+  background: #50d7e8;
+  color: #081321;
+  border: none;
+  padding: 13px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+section {
+  padding: 55px 8%;
+}
+
+section h2 {
+  margin-bottom: 25px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.card {
+  background: #14263d;
+  border: 1px solid #29435e;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.card h3 {
+  color: #50d7e8;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+form {
+  max-width: 650px;
+  background: #14263d;
+  padding: 25px;
+  border-radius: 12px;
+  display: grid;
+  gap: 14px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 13px;
+  background: #091829;
+  border: 1px solid #34506b;
+  border-radius: 7px;
+  color: white;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9aacc0;
+}
+
+.analysis {
+  background: #0b1d30;
+  border: 1px solid #34506b;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.analysis p {
+  color: #a8bacd;
+  margin: 8px 0;
+}
+
+.district-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.district-card {
+  background: #14263d;
+  border: 1px solid #29435e;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.district-card span {
+  display: block;
+  color: #50d7e8;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+#track input {
+  max-width: 400px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #14263d;
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #29435e;
+  text-align: left;
+  font-size: 13px;
+}
+
+th {
+  color: #50d7e8;
+}
+
+footer {
+  background: #101f33;
+  padding: 30px;
+  text-align: center;
+  color: #9db4ca;
+}
+
+footer h3 {
+  color: #50d7e8;
+  margin-bottom: 10px;
+}
+
+#photoPreview img {
+  max-width: 130px;
+  border-radius: 8px;
+}
+
+@media(max-width: 750px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .district-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
+
+@media(max-width: 450px) {
+  .stats, .district-grid {
+    grid-template-columns: 1fr;
+  }
+}

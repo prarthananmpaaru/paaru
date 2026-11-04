@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiviSense AI - Karnataka</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h2>CiviSense <span>AI</span></h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#report">Report Issue</a>
+    <a href="#districts">Districts</a>
+    <a href="#track">Track</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <p>ONE STATE · 31 DISTRICTS · ONE SMART SOLUTION</p>
+  <h1>Make Karnataka<br><span>Better Together.</span></h1>
+  <p>Report civic problems and help create cleaner, safer communities.</p>
+  <a class="btn" href="#report">Report an Issue +</a>
+</section>
+
+<section id="dashboard">
+  <h2>Karnataka Dashboard</h2>
+  <div class="stats">
+    <div class="card"><h3 id="totalCount">0</h3><p>Total Reports</p></div>
+    <div class="card"><h3 id="resolvedCount">0</h3><p>Resolved</p></div>
+    <div class="card"><h3 id="progressCount">0</h3><p>In Progress</p></div>
+    <div class="card"><h3 id="districtCount">0</h3><p>Districts Covered</p></div>
+  </div>
+</section>
+
+<section id="report">
+  <h2>Report a Civic Issue</h2>
+  <form id="reportForm">
+    <input id="citizenName" placeholder="Your Name" required>
+
+    <select id="district" required>
+      <option value="">Select District</option>
+    </select>
+
+    <select id="category" required>
+      <option value="">Select Issue</option>
+      <option>Road Damage</option>
+      <option>Waterlogging</option>
+      <option>Garbage Overflow</option>
+      <option>Broken Streetlight</option>
+      <option>Water Supply</option>
+      <option>Other</option>
+    </select>
+
+    <input id="area" placeholder="Area / Location" required>
+
+    <textarea id="description" placeholder="Describe the problem" required></textarea>
+
+    <label>Upload Issue Photo</label>
+    <input id="photo" type="file" accept="image/*">
+    <div id="photoPreview"></div>
+
+    <button type="button" id="gpsBtn">Get My Location</button>
+    <small id="gpsStatus">Location is optional</small>
+
+    <div class="analysis">
+      <b>Smart Issue Analysis</b>
+      <p id="analysisText">Choose an issue to see its suggested priority.</p>
+      <strong id="priorityBadge">WAITING</strong>
+    </div>
+
+    <button class="btn" type="submit">Submit Report</button>
+  </form>
+</section>
+
+<section id="districts">
+  <h2>District-wise Reports</h2>
+  <select id="districtFilter">
+    <option value="All">All Karnataka Districts</option>
+  </select>
+  <div id="districtGrid" class="district-grid"></div>
+</section>
+
+<section id="track">
+  <h2>Track Your Complaint</h2>
+  <input id="trackId" placeholder="Enter Complaint ID">
+  <button class="btn" id="trackBtn">Track</button>
+  <p id="trackResult">Your complaint status will appear here.</p>
+</section>
+
+<section>
+  <h2>Recent Reports</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th><th>Issue</th><th>District</th>
+          <th>Priority</th><th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="reportTable"></tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <h3>CiviSense AI</h3>
+  <p>Karnataka Smart Civic Issue Monitoring System</p>
+  <p>College Mini Project Demo</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
